@@ -1,9 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
 import { Footer } from "@/components/Footer";
 import { Links } from "@/components/Links";
+import { Headlines } from "@/components/Headline";
+import { Logo } from "@/components/Logo";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,20 +30,8 @@ export default function Home() {
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <main className={styles.main}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
-          />
-          <ol>
-            <li>
-              Get started by editing <code>pages/about.js</code>.
-            </li>
-            <li>Save and see your changes instantly.</li>
-          </ol>
+          <Logo />
+          <Headlines path="pages/about.js" />
           <Links />
         </main>
         <Footer />
