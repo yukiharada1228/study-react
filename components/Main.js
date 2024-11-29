@@ -8,7 +8,7 @@ export function Main(props) {
     <main className={styles.main}>
       <Logo />
       <Headlines>
-        <code>"pages/{props.page}.js"</code>
+        <code>&quot;pages/{props.page}.js&quot;</code>
       </Headlines>
       <Links />
     </main>
