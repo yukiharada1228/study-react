@@ -1,10 +1,19 @@
+import Head from "next/head";
+import Link from "next/link";
 import { Footer } from "@/src/components/Footer";
 import { Header } from "@/src/components/Header";
 import { Main } from "@/src/components/Main";
 import { Typography } from "@/src/components/Typography";
-import Head from "next/head";
+import { useCallback } from "react";
 
 export default function Home() {
+  const foo = 1;
+
+  const handleClick = useCallback((e) => {
+    e.preventDefault();
+    alert(foo);
+  }, []);
+
   return (
     <>
       <Head>
@@ -13,6 +22,9 @@ export default function Home() {
       </Head>
       <Header />
       <Typography>
+        <Link href="/about" onClick={handleClick}>
+          ボタン
+        </Link>
         <Main page="index" />
         <Footer />
       </Typography>
