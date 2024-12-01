@@ -1,7 +1,7 @@
 import styles from "./Main.module.css";
-import { Links } from "@/components/Links";
-import { Headlines } from "@/components/Headline";
-import { Logo } from "@/components/Logo";
+import { Links } from "@/src/components/Links";
+import { Headlines } from "@/src/components/Headline";
+import { Logo } from "@/src/components/Logo";
 
 export function Main(props) {
   return (
