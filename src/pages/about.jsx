@@ -5,7 +5,7 @@ import { Main } from "@/src/components/Main";
 import { Typography } from "@/src/components/Typography";
 
 
-export default function About({
+const About = ({
   doubleCount,
   isShow,
   handleClick,
@@ -14,7 +14,7 @@ export default function About({
   array,
   handleChange,
   handleAdd
-}) {
+}) => {
   return (
     <>
       <Head>
@@ -45,3 +45,5 @@ export default function About({
     </>
   );
 }
+
+export default About;

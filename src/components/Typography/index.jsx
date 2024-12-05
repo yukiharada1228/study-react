@@ -12,7 +12,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export function Typography(props) {
+export const Typography = (props) => {
   return (
       <div
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}

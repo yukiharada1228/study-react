@@ -1,11 +1,17 @@
 import Link from "next/link";
 import style from "./Header.module.css"
 
-export function Header() {
+const NAV_ITEMS = [
+  {href: "/", label: "Index"},
+  {href: "/about", label: "About"},
+]
+
+export const Header = () => {
   return (
     <header className={style.header}>
-      <Link className={style.anchor} href="/">Index</Link>
-      <Link className={style.anchor} href="/about">About</Link>
+      {NAV_ITEMS.map((item) => {
+        return  <Link key={item.href} className={style.anchor} href={item.href}>{item.label}</Link>
+      })}
     </header>
   );
 }

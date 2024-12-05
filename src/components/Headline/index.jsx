@@ -1,4 +1,4 @@
-export function Headlines(props) { // propsは親から渡された情報
+export const Headlines = (props) => { // propsは親から渡された情報
     return (
         <ol>
           <li>
